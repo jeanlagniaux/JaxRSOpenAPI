@@ -26,17 +26,15 @@ import io.swagger.v3.jaxrs2.integration.resources.OpenApiResource;
 
 public class TestApplication extends Application {
 
+	@Override
+	public Set<Class<?>> getClasses() {
 
-    @Override
-    public Set<Class<?>> getClasses() {
+		final Set<Class<?>> clazzes = new HashSet<Class<?>>();
 
-        final Set<Class<?>> clazzes = new HashSet<Class<?>>();
+		clazzes.add(PetResource.class);
+		clazzes.add(OpenApiResource.class);
 
-        clazzes.add(PetResource.class);
-        clazzes.add(OpenApiResource.class);
-        
-
-        return clazzes;
-    }
+		return clazzes;
+	}
 
 }
