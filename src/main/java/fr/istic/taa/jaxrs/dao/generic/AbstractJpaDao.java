@@ -6,17 +6,16 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
+import fr.istic.taa.jaxrs.dao.generic.EntityManagerHelper;
+
 public abstract class AbstractJpaDao<K, T extends Serializable> implements IGenericDao<K, T> {
 
-	private Class<T> clazz;
+	protected  Class<T> clazz;
 
 	protected EntityManager entityManager;
 
-	public AbstractJpaDao() {
+	public AbstractJpaDao(Class<T> clazzToSet) {
 		this.entityManager = EntityManagerHelper.getEntityManager();
-	}
-
-	public void setClazz(Class<T> clazzToSet) {
 		this.clazz = clazzToSet;
 	}
 
@@ -33,7 +32,6 @@ public abstract class AbstractJpaDao<K, T extends Serializable> implements IGene
 		t.begin();
 		entityManager.persist(entity);
 		t.commit();
-
 	}
 
 	public T update(final T entity) {
