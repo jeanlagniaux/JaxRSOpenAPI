@@ -1,4 +1,4 @@
-package fr.istic.taa.jaxrs.business;
+package fr.istic.taa.jaxrs.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
 package fr.istic.taa.jaxrs.dao.generic;
 
-import fr.istic.taa.jaxrs.business.Project;
+import fr.istic.taa.jaxrs.domain.Project;
 
 public class ProjectDao extends AbstractJpaDao<Long, Project>{
 
