@@ -24,17 +24,20 @@ public class JpaTest {
 		 * Lien pour montrer les valeurs jdbc:hsqldb:hsql://localhost/
 		 */
 
-
 		UserDao daoU = new UserDao();
+		User user = new User();
+		user.setMail("jean@mail.com");
+		user.setName("jean");
+		daoU.save(user);
 		
-		System.out.println(daoU.getUserByMail("pablo@mail.con"));
+		System.out.println(daoU.getUsers());
+		
+		
+		
+		
+		//System.out.println(daoU.getUserByMail("jean@mail.con"));
 		
 		CardDao dao = new CardDao();
-//		Card card = new Card();
-//		card.setName("tache4");
-//		card.setStatus("DOING");
-//		card.setAffectedUser(user);
-//		dao.save(card);
 		
 		// System.out.println("user : "+ dao.getAffectedUser().get(0).getName());
 		
