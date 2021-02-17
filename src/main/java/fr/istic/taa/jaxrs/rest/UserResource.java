@@ -28,7 +28,9 @@ public class UserResource{
 	@POST
 	@Consumes("application/json")
 	@Path("/addUser")
+	//si on veut rajouter une nouvelle classe en param il faut faire un nouveau @param
 	public Response addUser(@Parameter(description = "add user", required = true) User user) {
+		// java va comprendre grace au JSON envoyée dans la requette de quelle objet on parle
 		daoU.save(user);
 		return Response.ok().entity("SUCCESS").build();
 	}
