@@ -14,21 +14,20 @@ import fr.istic.taa.jaxrs.domain.User;
 import io.swagger.v3.oas.annotations.Parameter;
 
 @Path("/user")
-@Produces({ "application/json", "application/xml" })
-public class UserRessource{
+@Produces({"application/json"})
+public class UserResource{
 
 	UserDao daoU = new UserDao();
 	
 	@GET
 	@Path("/{mail}")
-	public User getPetById(@PathParam("mail") String email) {
+	public User getUserByMail(@PathParam("mail") String email) {
 		return daoU.getUserByMail(email);
 	}
 
 	@POST
 	@Consumes("application/json")
-	public Response addPet(
-			@Parameter(description = "Pet object that needs to be added to the store", required = true) Pet pet) {
+	public Response addUser(@Parameter(description = "Pet object that needs to be added to the store", required = true) Pet pet) {
 		// add pet
 		return Response.ok().entity("SUCCESS").build();
 	}
