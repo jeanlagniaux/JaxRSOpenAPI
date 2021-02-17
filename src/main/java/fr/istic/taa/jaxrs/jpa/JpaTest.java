@@ -26,8 +26,8 @@ public class JpaTest {
 
 		UserDao daoU = new UserDao();
 		User user = new User();
-		user.setMail("jean@mail.com");
-		user.setName("jean");
+		user.setMail("theo@mail.com");
+		user.setName("theo");
 		daoU.save(user);
 		
 		System.out.println(daoU.getUsers());
