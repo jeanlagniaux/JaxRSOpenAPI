@@ -21,6 +21,15 @@ public class PetResource {
 		// return pet
 		return new Pet();
 	}
+	
+	@GET
+	@Path("/{petId}/{petName}")
+	public Pet getPetById(@PathParam("petId") Long petId, @PathParam("petName") String name) {
+		// return pet
+		Pet pet = new Pet();
+		pet.setName(name);
+		return pet;
+	}
 
 	@POST
 	@Consumes("application/json")
