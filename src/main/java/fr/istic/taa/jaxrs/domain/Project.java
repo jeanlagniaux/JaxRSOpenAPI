@@ -15,6 +15,7 @@ public class Project implements Serializable{
 	private Long id;
 	private String name;
 	private List<Board> boards = new ArrayList<Board>();
+	//ajouter une liste d'users pour dire les user de ce projet ont acces a toute board
 	
 	public Project() {
 	}
