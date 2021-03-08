@@ -51,9 +51,7 @@ public class JpaTest {
 		for (Long long1 : s) {
 			System.out.println(long1);
 		}
-		*/
 		
-		ProjectDao daoP = new ProjectDao();
 		List<Board> b = new ArrayList<Board>();
 		b = daoP.getBoardsByProjectName("le project");
 		for (Board board : b) {
@@ -65,6 +63,23 @@ public class JpaTest {
 		for (Board board : bs) {
 			System.out.println(board.getId());
 		}
+		
+		*/
+		
+		BoardDao daoB = new BoardDao();
+		List<Card> cs = new ArrayList<Card>();
+		cs = daoB.getBoardCardsByName("mon tableau");
+		for (Card card : cs) {
+			//System.out.println(card.getId());
+		}
+		
+		List<User> us = new ArrayList<User>();
+		us = daoB.getBoardUsersByName("mon tableau");
+		for (User user : us) {
+			System.out.println(user.getName());
+		}
+		
+		
 		
 	}
 
