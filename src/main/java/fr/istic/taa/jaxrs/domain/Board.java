@@ -14,8 +14,8 @@ import javax.persistence.OneToMany;
 @Entity
 public class Board implements Serializable {
 	private Long id;
-	private String Name;
-	private String Description;
+	private String name;
+	private String description;
 	private Project myProject;
 	private List<Card> cards = new ArrayList<Card>();
 	private List<User> users = new ArrayList<User>();
@@ -35,19 +35,19 @@ public class Board implements Serializable {
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 	public String getDescription() {
-		return Description;
+		return description;
 	}
 
 	public void setDescription(String description) {
-		Description = description;
+		this.description = description;
 	}
 
 	@OneToMany(mappedBy = "myBoard")
