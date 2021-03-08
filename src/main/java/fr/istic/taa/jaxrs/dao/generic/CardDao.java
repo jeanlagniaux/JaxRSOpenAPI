@@ -12,13 +12,13 @@ public class CardDao extends AbstractJpaDao<Long, Card> {
 		super(Card.class);
 	}
 
-	public List<User> getAffectedUser() {
-		String query = "select u.affectedUser from Card as u";
-		return this.entityManager.createQuery(query).getResultList();
+	public List<User> getCardUsersById(Long id) {
+		String query = "select c.affectedUser from Card as c where c.id = :id";
+		return this.entityManager.createQuery(query).setParameter("id", id).getResultList();
 	}
 
-	public Card getCardById(Long id) {
-		String query = "select c.name from Card as c where c.id = :id";
+	public Card getCardById(long id) {
+		String query = "select c from Card as c where c.id = :id";
 		return EntityManagerHelper.getEntityManager().createQuery(query, Card.class).setParameter("id", id)
 				.getSingleResult();
 	}

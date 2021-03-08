@@ -26,61 +26,52 @@ public class JpaTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-		//init();
-		
+
+		// init();
+
 		/*
-		UserDao daoU = new UserDao();
-		Board b = new Board();
-		List<Board> bds = new ArrayList<Board>();
-		bds = daoU.getUserBoardByMail("aaaaaaa@mail.com");
-		for (Board board : bds) {
-			//System.out.println(board.getId());
-		}
-		
-		Card c = new Card();
-		List<Card> cs = new ArrayList<Card>();
-		cs = daoU.getUserCardsByMail("aaaaaaa@mail.com");
-		for (Card card : cs) {
-			//System.out.println(card.getId());
-		}
-		
-		ProjectDao daoP = new ProjectDao();
-		List<Long> s = new ArrayList<Long>();
-		s = daoP.getProject();
-		for (Long long1 : s) {
-			System.out.println(long1);
-		}
-		
-		List<Board> b = new ArrayList<Board>();
-		b = daoP.getBoardsByProjectName("le project");
-		for (Board board : b) {
-			System.out.println(board.getId());
-		}
-		
-		List<Board> bs = new ArrayList<Board>();
-		bs = daoP.getBoardsByProjectID((long) 9);
-		for (Board board : bs) {
-			System.out.println(board.getId());
-		}
-		
-		*/
-		
-		BoardDao daoB = new BoardDao();
-		List<Card> cs = new ArrayList<Card>();
-		cs = daoB.getBoardCardsByName("mon tableau");
-		for (Card card : cs) {
-			//System.out.println(card.getId());
-		}
-		
-		List<User> us = new ArrayList<User>();
-		us = daoB.getBoardUsersByName("mon tableau");
-		for (User user : us) {
-			System.out.println(user.getName());
-		}
-		
-		
-		
+		 * UserDao daoU = new UserDao(); Board b = new Board(); List<Board> bds = new
+		 * ArrayList<Board>(); bds = daoU.getUserBoardByMail("aaaaaaa@mail.com"); for
+		 * (Board board : bds) { //System.out.println(board.getId()); }
+		 * 
+		 * Card c = new Card(); List<Card> cs = new ArrayList<Card>(); cs =
+		 * daoU.getUserCardsByMail("aaaaaaa@mail.com"); for (Card card : cs) {
+		 * //System.out.println(card.getId()); }
+		 * 
+		 * ProjectDao daoP = new ProjectDao(); List<Long> s = new ArrayList<Long>(); s =
+		 * daoP.getProject(); for (Long long1 : s) { System.out.println(long1); }
+		 * 
+		 * List<Board> b = new ArrayList<Board>(); b =
+		 * daoP.getBoardsByProjectName("le project"); for (Board board : b) {
+		 * System.out.println(board.getId()); }
+		 * 
+		 * List<Board> bs = new ArrayList<Board>(); bs =
+		 * daoP.getBoardsByProjectID((long) 9); for (Board board : bs) {
+		 * System.out.println(board.getId()); }
+		 * 
+		 * 
+		 * 
+		 * BoardDao daoB = new BoardDao(); List<Card> cs = new ArrayList<Card>(); cs =
+		 * daoB.getBoardCardsByName("mon tableau"); for (Card card : cs) {
+		 * //System.out.println(card.getId()); }
+		 * 
+		 * List<User> us = new ArrayList<User>(); us =
+		 * daoB.getBoardUsersByName("mon tableau"); for (User user : us) {
+		 * System.out.println(user.getName()); }
+		 * 
+		 * List<User> us2 = new ArrayList<User>(); us2 = daoB.getBoardUsersById((long)
+		 * 7); for (User user : us2) { System.out.println(user.getName()); }
+		 * 
+		 * 
+		 * 
+		 * CardDao daoC = new CardDao(); Card c = new Card(); c =
+		 * daoC.getCardById((long) 8); System.out.println(c.getName());
+		 * 
+		 * List<User> us = new ArrayList<User>(); us = daoC.getCardUsersById((long) 8);
+		 * for (User user : us) { System.out.println(user.getName()); }
+		 * 
+		 */
+
 	}
 
 	private static void init() {

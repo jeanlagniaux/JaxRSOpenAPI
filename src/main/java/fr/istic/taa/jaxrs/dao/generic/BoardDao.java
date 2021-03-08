@@ -30,8 +30,13 @@ public class BoardDao extends AbstractJpaDao<Long, Board>{
 	}
 
 	public List<User> getBoardUsersByName(String name) {
-		String query = "select u.cards from User as u where u.name = :name";
+		String query = "select b.users from Board as b where b.name = :name";
 		return EntityManagerHelper.getEntityManager().createQuery(query).setParameter("name", name).getResultList();
+	}
+	
+	public List<User> getBoardUsersById(Long id) {
+		String query = "select b.users from Board as b where b.id = :id";
+		return EntityManagerHelper.getEntityManager().createQuery(query).setParameter("id", id).getResultList();
 	}
 
 	
