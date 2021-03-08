@@ -13,7 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Card implements Serializable{
+public class Card implements Serializable {
 
 	private Long id;
 	private String name;
@@ -25,7 +25,7 @@ public class Card implements Serializable{
 	private List<String> tags = new ArrayList<String>();
 	private String url;
 	private Board myBoard;
-	
+
 	public Card() {
 	}
 

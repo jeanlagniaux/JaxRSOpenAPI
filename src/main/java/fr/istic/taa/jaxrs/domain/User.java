@@ -15,16 +15,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @XmlRootElement(name = "User")
-public class User implements Serializable{
-	
+public class User implements Serializable {
+
 	private String mail;
 	private String name;
-	
+
 	private List<Board> myBoards = new ArrayList<Board>();
 	private List<Card> cards = new ArrayList<Card>();
-	
-	
-	
 
 	public User() {
 	}
@@ -69,9 +66,5 @@ public class User implements Serializable{
 	public void setMyBoards(List<Board> myBoards) {
 		this.myBoards = myBoards;
 	}
-	
-	
-	
-	
 
 }

@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Board implements Serializable{
+public class Board implements Serializable {
 	private Long id;
 	private String Name;
 	private String Description;
@@ -23,7 +23,7 @@ public class Board implements Serializable{
 
 	public Board() {
 	}
-	
+
 	@Id
 	@GeneratedValue
 	public Long getId() {
@@ -77,6 +77,4 @@ public class Board implements Serializable{
 		this.myProject = myProject;
 	}
 
-	
-	
 }
