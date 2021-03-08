@@ -12,7 +12,7 @@ public class ProjectDao extends AbstractJpaDao<Long, Project> {
 		super(Project.class);
 	}
 
-	public List<Long> getProject() {
+	public List<Long> getProjects() {
 		String query = "select p.id from Project as p";
 		return this.entityManager.createQuery(query).getResultList();
 	}
