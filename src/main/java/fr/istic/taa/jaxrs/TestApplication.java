@@ -21,6 +21,8 @@ import java.util.Set;
 
 import javax.ws.rs.core.Application;
 
+import fr.istic.taa.jaxrs.rest.BoardResource;
+import fr.istic.taa.jaxrs.rest.CardResource;
 import fr.istic.taa.jaxrs.rest.PetResource;
 import fr.istic.taa.jaxrs.rest.SwaggerResource;
 import fr.istic.taa.jaxrs.rest.UserResource;
@@ -34,7 +36,11 @@ public class TestApplication extends Application {
 		final Set<Class<?>> clazzes = new HashSet<Class<?>>();
 
 		clazzes.add(PetResource.class);
+		
 		clazzes.add(UserResource.class);
+		clazzes.add(CardResource.class);
+		clazzes.add(BoardResource.class);
+		
 		clazzes.add(SwaggerResource.class);
 		clazzes.add(OpenApiResource.class);
 

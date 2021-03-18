@@ -27,7 +27,7 @@ public class CardResource {
 	public List<User> getAffectedUser(@PathParam("id") int id) {
 		return daoC.getCardUsersById((long) id);
 	}
-	
+
 	@GET
 	@Path("/{id}")
 	public Card getCardById(@PathParam("id") int id) {
@@ -36,9 +36,13 @@ public class CardResource {
 
 	@POST
 	@Consumes("application/json")
-	public Response addCard(
-			@Parameter(description = "Pet object that needs to be added to the store", required = true) Pet pet) {
-		// add pet
+	@Path("/addCard")
+	// si on veut rajouter une nouvelle classe en param il faut faire un nouveau
+	// @param
+	public Response addCard(@Parameter(description = "add user", required = true) Card card) {
+		// java va comprendre grace au JSON envoyée dans la requette de quelle objet on
+		// parle
+		daoC.save(card);
 		return Response.ok().entity("SUCCESS").build();
 	}
 

@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 
 @Entity
 public class Board implements Serializable {
@@ -26,6 +28,7 @@ public class Board implements Serializable {
 
 	@Id
 	@GeneratedValue
+	@XmlElement(name = "BoardID")
 	public Long getId() {
 		return id;
 	}
@@ -34,6 +37,7 @@ public class Board implements Serializable {
 		this.id = id;
 	}
 
+	@XmlElement(name = "BoardName")
 	public String getName() {
 		return name;
 	}
@@ -42,6 +46,7 @@ public class Board implements Serializable {
 		this.name = name;
 	}
 
+	@XmlElement(name = "BoardDesc")
 	public String getDescription() {
 		return description;
 	}
@@ -51,6 +56,8 @@ public class Board implements Serializable {
 	}
 
 	@OneToMany(mappedBy = "myBoard")
+	@XmlElementWrapper(name = "cards")
+	@XmlElement(name = "card")
 	public List<Card> getCards() {
 		return cards;
 	}
@@ -60,6 +67,8 @@ public class Board implements Serializable {
 	}
 
 	@ManyToMany(mappedBy = "myBoards")
+	@XmlElementWrapper(name = "Users")
+	@XmlElement(name = "user")
 	public List<User> getUsers() {
 		return users;
 	}
@@ -69,6 +78,8 @@ public class Board implements Serializable {
 	}
 
 	@ManyToOne
+	@XmlElementWrapper(name = "Projects")
+	@XmlElement(name = "BoardProject")
 	public Project getMyProject() {
 		return myProject;
 	}

@@ -11,8 +11,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
+@XmlRootElement(name = "Card")
 public class Card implements Serializable {
 
 	private Long id;
@@ -31,6 +35,7 @@ public class Card implements Serializable {
 
 	@Id
 	@GeneratedValue
+	@XmlElement(name = "CardID")
 	public Long getId() {
 		return id;
 	}
@@ -38,7 +43,7 @@ public class Card implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+	@XmlElement(name = "CardName")
 	public String getName() {
 		return name;
 	}
@@ -46,7 +51,7 @@ public class Card implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	@XmlElement(name = "CardNote")
 	public String getNote() {
 		return note;
 	}
@@ -54,7 +59,8 @@ public class Card implements Serializable {
 	public void setNote(String note) {
 		this.note = note;
 	}
-
+	
+	@XmlElement(name = "CardTODO")
 	public int getTimeToDO() {
 		return timeToDO;
 	}
@@ -62,7 +68,7 @@ public class Card implements Serializable {
 	public void setTimeToDO(int timeToDO) {
 		this.timeToDO = timeToDO;
 	}
-
+	@XmlElement(name = "CardStatus")
 	public String getStatus() {
 		return status;
 	}
@@ -70,7 +76,7 @@ public class Card implements Serializable {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
+	@XmlElement(name = "CardEndDate")
 	public Date getEndDate() {
 		return endDate;
 	}
@@ -80,6 +86,8 @@ public class Card implements Serializable {
 	}
 
 	@ManyToOne
+	@XmlElementWrapper(name = "Users")
+	@XmlElement(name = "User")
 	public User getAffectedUser() {
 		return affectedUser;
 	}
@@ -90,6 +98,8 @@ public class Card implements Serializable {
 
 	@Column
 	@ElementCollection
+	@XmlElementWrapper(name = "Tags")
+	@XmlElement(name = "tag")
 	public List<String> getTags() {
 		return tags;
 	}
@@ -97,7 +107,8 @@ public class Card implements Serializable {
 	public void setTags(List<String> tags) {
 		this.tags = tags;
 	}
-
+	
+	@XmlElement(name = "CardUrl")
 	public String getUrl() {
 		return url;
 	}
@@ -107,6 +118,7 @@ public class Card implements Serializable {
 	}
 
 	@ManyToOne
+	@XmlElement(name = "CardBoard")
 	public Board getMyBoard() {
 		return myBoard;
 	}
