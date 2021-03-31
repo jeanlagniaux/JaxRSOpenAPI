@@ -23,7 +23,6 @@ import javax.ws.rs.core.Application;
 
 import fr.istic.taa.jaxrs.rest.BoardResource;
 import fr.istic.taa.jaxrs.rest.CardResource;
-import fr.istic.taa.jaxrs.rest.PetResource;
 import fr.istic.taa.jaxrs.rest.SwaggerResource;
 import fr.istic.taa.jaxrs.rest.UserResource;
 import io.swagger.v3.jaxrs2.integration.resources.OpenApiResource;
@@ -34,8 +33,6 @@ public class TestApplication extends Application {
 	public Set<Class<?>> getClasses() {
 
 		final Set<Class<?>> clazzes = new HashSet<Class<?>>();
-
-		clazzes.add(PetResource.class);
 		
 		clazzes.add(UserResource.class);
 		clazzes.add(CardResource.class);
