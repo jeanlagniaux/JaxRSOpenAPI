@@ -13,6 +13,8 @@ import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Board implements Serializable {
 	private Long id;
@@ -58,6 +60,7 @@ public class Board implements Serializable {
 	@OneToMany(mappedBy = "myBoard")
 	@XmlElementWrapper(name = "cards")
 	@XmlElement(name = "card")
+	@JsonIgnore
 	public List<Card> getCards() {
 		return cards;
 	}
@@ -69,6 +72,7 @@ public class Board implements Serializable {
 	@ManyToMany(mappedBy = "myBoards")
 	@XmlElementWrapper(name = "Users")
 	@XmlElement(name = "user")
+	@JsonIgnore
 	public List<User> getUsers() {
 		return users;
 	}
@@ -80,6 +84,7 @@ public class Board implements Serializable {
 	@ManyToOne
 	@XmlElementWrapper(name = "Projects")
 	@XmlElement(name = "BoardProject")
+	@JsonIgnore
 	public Project getMyProject() {
 		return myProject;
 	}

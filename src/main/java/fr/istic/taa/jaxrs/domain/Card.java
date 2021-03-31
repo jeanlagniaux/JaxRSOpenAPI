@@ -15,6 +15,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @XmlRootElement(name = "Card")
 public class Card implements Serializable {
@@ -88,6 +90,7 @@ public class Card implements Serializable {
 	@ManyToOne
 	@XmlElementWrapper(name = "Users")
 	@XmlElement(name = "User")
+	@JsonIgnore
 	public User getAffectedUser() {
 		return affectedUser;
 	}
