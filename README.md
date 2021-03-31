@@ -18,7 +18,7 @@ Pour lancer et tester le projet :
 
 ## API
 
-|Méthode  | how to|  endpoint|
+|Méthodes  | how to|  endpoint|
 |--|--|--|
 |GET card by ID  |  localhost:8080/card/{id} | http://localhost:8080/card/8
 |GET board by ID | localhost:8080/board/{id} | http://localhost:8080/board/7
@@ -31,7 +31,7 @@ Pour lancer et tester le projet :
 ```mermaid
 classDiagram
 Card --* Board
-Board --* Projets
+Board --* Project
 Board -- User
 User-- Card
 ```
