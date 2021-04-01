@@ -5,15 +5,15 @@
 Pour lancer et tester le projet : 
  1. Importer le projet dans votre IDE
  2. Créer et utiliser une **base de données** :
-	- soit prendre le script SQL **"sir_database.sql"**
+	- Soit prendre le script SQL **"sir_database.sql"**
 	- Autrement créer une base de données sur un serveur local et mettre à jour le fichier **"persistence.xml"** avec vos credential. 
  3. Pour **lancer le projet** : 
 	 - Run le **"Pom.xml"** en tant que maven build >>> ${project_loc:jaxrs-example} ) 
-	 - Si vous avez créer votre base de données sans prendre le fichier SQL ou pour tester les classes de **DAO**, vous pouvez décommenter la fonction **Main** dans le fichier **"JpaTest"** et le run en tant que application Java afin de peupler la base de données et d'utiliser les classes de DAO
+	 - Si vous avez créés votre base de données sans prendre le fichier SQL ou pour tester les classes de **DAO**, vous pouvez décommenter la fonction **Main** dans le fichier **"JpaTest"** et le run en tant que application Java afin de peupler la base de données et d'utiliser les classes de DAO
  4.  Pour utiliser l'**API** :
 	 - Lancer le fichier **"RestServer"**
 	 - Consulter les différentes méthodes disponibles sur http://localhost:8080/openapi.json
-		 - *A savoir : le projet évolue et peut donc changer en fonction du temps ou il est testé, pour etre certain du fonctionnement de l'api, prennez la liste ci-dessous ou utilisez la librairie postman à la racine du projet*
+		 - *A savoir : le projet évolue et peut donc changer en fonction du temps où il est testé, pour être certain du fonctionnement de l'api, prenez la liste ci-dessous ou utilisez la librairie postman à la racine du projet*
 	 - tester les différents endpoint. 
 
 ## API
