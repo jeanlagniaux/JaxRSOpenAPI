@@ -13,7 +13,7 @@ Pour lancer et tester le projet :
  4.  Pour utiliser l'**API** :
 	 - Lancer le fichier **"RestServer"**
 	 - Consulter les différentes méthodes disponibles sur http://localhost:8080/openapi.json
-		 - *A savoir : le projet évolue et peut donc changer en fonction du temps où il est testé, pour être certain du fonctionnement de l'api, prenez la liste ci-dessous ou utilisez la librairie postman à la racine du projet*
+		 - *A savoir : le projet évolue et peut donc changer en fonction du temps où il est testé, pour être certain du fonctionnement de l'api, prenez la liste ci-dessous ou utilisez la librairie postman à la racine du projet **"TP_SIR.postman_collection.json"***
 	 - tester les différents endpoint. 
 
 ## API
