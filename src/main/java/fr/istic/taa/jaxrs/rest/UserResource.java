@@ -13,7 +13,7 @@ import fr.istic.taa.jaxrs.domain.Card;
 import fr.istic.taa.jaxrs.domain.User;
 import io.swagger.v3.oas.annotations.Parameter;
 
-@Path("/user")
+@Path("/api/user")
 @Produces({ "application/json" })
 public class UserResource {
 

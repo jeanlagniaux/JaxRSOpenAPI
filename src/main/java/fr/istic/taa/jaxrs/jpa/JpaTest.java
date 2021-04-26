@@ -23,7 +23,6 @@ public class JpaTest {
 	}
 	
 	public static void main(String[] args) {
-
 //		init();
 		
 //		UserDao daoU = new UserDao();

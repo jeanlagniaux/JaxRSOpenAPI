@@ -16,7 +16,7 @@ import fr.istic.taa.jaxrs.domain.Pet;
 import fr.istic.taa.jaxrs.domain.User;
 import io.swagger.v3.oas.annotations.Parameter;
 
-@Path("/card")
+@Path("/api/card")
 @Produces({ "application/json" })
 public class CardResource {
 

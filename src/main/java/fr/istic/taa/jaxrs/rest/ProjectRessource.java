@@ -15,7 +15,7 @@ import fr.istic.taa.jaxrs.domain.Board;
 import fr.istic.taa.jaxrs.domain.Project;
 import io.swagger.v3.oas.annotations.Parameter;
 
-@Path("/projet")
+@Path("/api/projet")
 @Produces({ "application/json" })
 public class ProjectRessource {
 
