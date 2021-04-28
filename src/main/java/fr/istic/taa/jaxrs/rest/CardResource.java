@@ -33,6 +33,12 @@ public class CardResource {
 	public Card getCardById(@PathParam("id") int id) {
 		return daoC.getCardById((long) id);
 	}
+	
+	@GET
+	@Path("/board/{id}")
+	public List<Card> getCardByBoardId(@PathParam("id") int id) {
+		return daoC.getCardByBoardId((long) id);
+	}
 
 	@POST
 	@Consumes("application/json")

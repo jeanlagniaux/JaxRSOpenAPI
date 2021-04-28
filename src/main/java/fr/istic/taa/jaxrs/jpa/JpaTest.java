@@ -23,6 +23,14 @@ public class JpaTest {
 	}
 	
 	public static void main(String[] args) {
+		
+		CardDao c = new CardDao();
+		List<Card> cs = new ArrayList<Card>();
+		cs = c.getCardByBoardId(7);
+		for (Card card : cs) {
+			System.out.println(card.getId());
+		}
+		
 //		init();
 		
 //		UserDao daoU = new UserDao();

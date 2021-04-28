@@ -22,6 +22,12 @@ public class CardDao extends AbstractJpaDao<Long, Card> {
 		return EntityManagerHelper.getEntityManager().createQuery(query, Card.class).setParameter("id", id)
 				.getSingleResult();
 	}
+	
+	public List<Card> getCardByBoardId(long id) {
+		String query = "select c from Card as c where c.myBoard.id = :id";
+		return EntityManagerHelper.getEntityManager().createQuery(query, Card.class).setParameter("id", id)
+				.getResultList();
+	}
 
 	public Card getCardByName(String name) {
 		String query = "select c from Card as c where c.name = :name";

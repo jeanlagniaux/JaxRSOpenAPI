@@ -28,6 +28,12 @@ public class ProjectRessource {
 		public List<Board> getBoardsByProjectName(@PathParam("name") String name) {
 			return daoP.getBoardsByProjectName(name);
 		}
+		
+		@GET
+		@Path("/all")
+		public List<Project> getAll() {
+			return daoP.findAll();
+		}
 
 		@POST
 		@Consumes("application/json")
