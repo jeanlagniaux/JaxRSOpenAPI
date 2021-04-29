@@ -8,6 +8,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import fr.istic.taa.jaxrs.dao.generic.CardDao;
@@ -41,7 +42,7 @@ public class CardResource {
 	}
 
 	@POST
-	@Consumes("application/json")
+	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/addCard")
 	public Response addCard(@Parameter(description = "add user", required = true) Card card) {
 		daoC.save(card);
